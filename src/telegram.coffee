@@ -26,6 +26,7 @@ class Telegram extends Adapter
         self.robot.logger.info "Telegram Bot Identified: " + self.bot_firstname
 
         if self.bot_username != self.robot.name
+          self.robot.logger.warning self.robot.name + " does not match Telegram Bot name: " + self.bot_username
           self.robot.logger.warning "It is advised to use the same bot name as your Telegram Bot: " + self.bot_username
           self.robot.logger.warning "Having a different bot name can result in an inconsistent experience when using @mentions"
 
